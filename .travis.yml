@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t priyam304/react-client -f Dockerfile.dev ./client
+  - docker build -t priyam304/react-client -f ./client/Dockerfile.dev ./client
 
 scripts:
   - docker run -e CI=true priyam304/react-client npm run test
