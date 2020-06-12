@@ -10,7 +10,7 @@ scripts:
   - docker run -e CI=true priyam304/react-client npm run test
 
 after_success:
-  - docker build -t priyam304/multi-docker-client ./client/nginx
+  - docker build -t priyam304/multi-docker-client ./client
   - docker build -t priyam304/multi-docker-server ./server 
   - docker build -t priyam304/multi-docker-worker ./worker 
   - docker build -t priyam304/multi-docker-nginx ./nginx
